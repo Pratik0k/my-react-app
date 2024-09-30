@@ -1,0 +1,89 @@
+/* Glowing Text */
+.hover-glow {
+    position: relative;
+    display: inline-block;
+    
+    font-size: 22px;
+    margin-left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .hover-glow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  
+  .hover-glow:hover {
+    color: #4ade80; /* Change text color on hover */
+    text-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+    cursor: pointer;
+    box-shadow: 0px -4px 6px rgba(255, 255, 255, 0.4), /* Top shadow */
+                0px 4px 6px rgba(255, 255, 255, 0.4);  /* Bottom shadow */
+  }
+  
+  .hover-glow:hover::before {
+    opacity: 1;
+  }
+
+  .hover-animate {
+    font-size: 20px;
+  }
+
+  
+  .hover-animate::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  
+  .hover-animate:hover {
+    color: #4ade80; /* Change text color on hover */
+    text-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+    cursor: pointer;
+    
+  }
+  
+  .close-icon {
+    transition: transform 0.3s ease; /* Smooth scaling */
+  }
+  
+  .close-icon:hover {
+    transform: scale(1.2); /* Scale the icon by 20% when hovered */
+  }
+  .hamburger-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .hamburger-icon:hover {
+    transform: scale(1.2); /* Slightly enlarges the icon on hover */
+  }
+  
+  .hamburger-icon:focus {
+    transform: scale(1.2); /* Enlarges the icon on focus for accessibility */
+  }
+  
+  
